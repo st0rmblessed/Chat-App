@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" type="text/css" href="landing.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="title">Chat app</h1>
+      <div class="chat-login">
+        <form method="POST" action="/">
+          <input name="name" id="m" autocomplete="off" placeholder="Insert your name" type="username"
+            required /><button>Let's Chat
+            </button>
+        </form>
+        <div class="users">Who is online?
+          <ul>
+            <% for(var i=0; i<users.length; i++) { %>
+            <li>
+              <%= users[i] %>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="landing.js"></script>
+</body>
+
+</html>

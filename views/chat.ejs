@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room</title>
+  <link rel="stylesheet" type="text/css" href="chat.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h3>Connected as: <%= name %></h2>
+        <button class="exit-button" onclick="location.href='/'">Exit</button>
+    </header>
+
+    <main>
+      <section>
+        <ul id="messages"></ul>
+      </section>
+      <aside>
+        <h1>Connected as: <%= name %></h1>
+        <h2>In this room:</h2>
+        <div class="connected-users">
+          <% for(var i=0; i<users.length; i++) { %>
+          <li>
+            <%= users[i] %>
+          </li>
+          <% } %>
+        </div>
+        <button class="exit-button" onclick="location.href='/'">Exit</button>
+      </aside>
+    </main>
+
+    <footer>
+      <form action="">
+        <input id="m" autocomplete="off" placeholder="Write your message here" required /><button>Send</button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+body{
+    height: 100vh;
+    margin: 0;
+    color: black;
+
+}
+
+button{
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    max-width: 100px;
+    border: 2px solid #0D47A1;
+    font-weight: bold;
+    background: #fff;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #0D47A1;
+    color: #fff;
+}
+
+ul{
+    padding: 0;
+    text-align: center;
+    display: none;
+}
+
+li{
+    margin: 5px;
+}
+
+ul > li{
+    list-style-type: none;
+}
+
+.show{
+    display: block;
+    margin: 0;
+}
+
+.users{
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 160px;
+    overflow: auto;
+    width: 200px;
+    text-align: center;
+    border: 2px solid #0D47A1;
+}
+
+.users:hover{
+    cursor: pointer;
+}
+
+.users:hover + ul{
+    visibility: visible;
+}
+
+
+.title{
+    text-align: center;
+}
+
+
+.chat-login{
+    margin:  60px auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+}
+
+.wrapper{
+    background-image: linear-gradient(45deg,#1A237E, #E8EAF6);
+    height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 400px;
+    height: 450px;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 13px 40px -13px rgba(0,0,0,.75);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type = "username"]{
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+        margin: 30px auto;
+    }
+
+    .container{
+        height: 70vh;
+    }
+}
